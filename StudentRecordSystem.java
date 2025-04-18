@@ -42,12 +42,12 @@ public class StudentRecordSystem {
                     String grade = scanner.nextLine();
 
                     students.add(new Student(id, name, grade));
-                    System.out.println("✅ Student added successfully!");
+                    System.out.println("Student added successfully!");
                     break;
 
                 case 2:
                     if (students.isEmpty()) {
-                        System.out.println("❌ No student records found.");
+                        System.out.println(" No student records found.");
                     } else {
                         System.out.println("\n--- Student Records ---");
                         for (Student s : students) {
@@ -62,23 +62,23 @@ public class StudentRecordSystem {
                     boolean found = false;
                     for (Student s : students) {
                         if (s.id == searchId) {
-                            System.out.println("✅ Student Found:");
+                            System.out.println(" Student Found:");
                             s.display();
                             found = true;
                             break;
                         }
                     }
                     if (!found) {
-                        System.out.println("❌ Student with ID " + searchId + " not found.");
+                        System.out.println(" Student with ID " + searchId + " not found.");
                     }
                     break;
 
                 case 4:
-                    System.out.println("👋 Exiting Program...");
+                    System.out.println(" Exiting Program...");
                     break;
 
                 default:
-                    System.out.println("❌ Invalid choice. Try again.");
+                    System.out.println(" Invalid choice. Try again.");
             }
 
         } while (choice != 4);
